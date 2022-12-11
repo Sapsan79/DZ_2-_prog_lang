@@ -5,13 +5,30 @@
 // 32679 -> 6
 */
 
-Console.WriteLine("Введите число не менее трёхзначного: ");
-string NumberText = Console.ReadLine();
-if (NumberText.Length > 2)
+//Console.WriteLine("Введите число не менее трёхзначного: ");
+//string NumberText = Console.ReadLine();
+//if (NumberText.Length > 2)
+//{
+//    Console.WriteLine("третья цифра: " + NumberText[2]);
+//    }
+//else
+//{
+//    Console.WriteLine("третьей цифры нет");
+//}
+Console.Write("Введите значение: ");
+int i = int.Parse(Console.ReadLine());
+if (Math.Abs(i) <= 99)//Значение по модулю
 {
-    Console.WriteLine("третья цифра: " + NumberText[2]);
-    }
+    Console.WriteLine("нет третьего символа: ");
+}
 else
 {
-    Console.WriteLine("третьей цифры нет");
+    string s1 = i.ToString();
+
+    if (i > 0)
+        Console.WriteLine(s1[2]);
+
+    else
+        Console.WriteLine(s1[3]);
+
 }
